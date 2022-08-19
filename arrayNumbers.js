@@ -1,9 +1,7 @@
-const randomNumber = (length, min, max) => {
-  const newArray = [...Array(length)].map(() =>
+const randomNumber = (length, min, max) =>
+  [...Array(length)].map(() =>
     Math.floor(Math.random() * (max - min + 1) + min)
   );
-  return newArray;
-};
 
 //a) Napisz funkcję, która zwróci tablicę o długości podanej jako „howManyNumbers”. Ta tablica musi zawierać w sobie losowe liczby z zakresu min i max:
 const genArrayNumbers = (howManyNumbers = 10, min = 1, max = 10) => {
@@ -13,13 +11,11 @@ genArrayNumbers();
 
 //b) Napisz funkcje, która wygeneruje array z 10 arrayami
 const genNewArray = (howManyArrays = 10, length = 10, min = 1, max = 10) => {
-  const allArrays = [...Array(howManyArrays)].map(() =>
-    randomNumber(length, min, max)
-  );
-  return allArrays;
+  [...Array(howManyArrays)].map(() => randomNumber(length, min, max));
 };
 genNewArray();
 
+//
 // STARA WERSJA:
 // const genArrayNumbers = (howManyNumbers = 10, min = 1, max = 10) => {
 //   randomArray = (length, min, max) =>
